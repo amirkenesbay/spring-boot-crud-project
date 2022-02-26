@@ -13,6 +13,12 @@
     <div class="m-2">
         <a class="h3" th:href="@{/users/new}">Add New User</a>
     </div>
+
+    <!--/*@thymesVar id="message" type="message"*/-->
+    <div th:if = "${message}" class="alert alert-success text-center">
+        [[${message}]]
+    </div>
+
     <div>
         <table class="table table-bordered">
             <thead class="table-dark">
@@ -21,7 +27,7 @@
                 <th>E-mail</th>
                 <th>First Name</th>
                 <th>Last Name</th>
-                <th></th>
+                <th>Enabled</th>
             </tr>
             </thead>
             <tbody>
@@ -31,6 +37,7 @@
                     <td>[[${user.email}]]</td>
                     <td>[[${user.firstName}]]</td>
                     <td>[[${user.lastName}]]</td>
+                    <td>[[${user.enabled}]]</td>
                     <td>
                         <a class="h4 mr-3" th:href="@{'/users/edit/' + ${user.id}}">Edit</a>
                         <a class="h4 mr-3" th:href="@{'/users/delete/' + ${user.id}}">Delete</a>
