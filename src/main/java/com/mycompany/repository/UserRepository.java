@@ -1,4 +1,4 @@
-package com.mycompany.userservice;
+package com.mycompany.repository;
 
 import com.mycompany.entity.User;
 import org.springframework.data.repository.CrudRepository;
