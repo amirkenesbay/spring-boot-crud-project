@@ -1,8 +1,8 @@
-package com.mycompany.user;
+package com.mycompany.userservice;
 
+import com.mycompany.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package com.mycompany.user;
+package com.mycompany.userservice;
 
 public class UserNotFoundException extends Throwable {
     public UserNotFoundException(String message) {
