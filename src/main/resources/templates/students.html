@@ -13,6 +13,34 @@
     <div class="m-2">
         <a class="h3"></a>
     </div>
+    <div>
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Passport №</th>
+                    <th>Expelled</th>
+                </tr>
+            </thead>
+            <tbody>
+            <th:block th:each = "student: ${studentList}">
+                <tr>
+                    <td>[[${student.id}]]</td>
+                    <td>[[${student.firstName}]]</td>
+                    <td>[[${student.lastName}]]</td>
+                    <td>[[${student.passportNumber}]]</td>
+                    <td>[[${student.expelled}]]</td>
+                    <td>
+                        <a class="h4 mr-3" th:href="@{'/students/edit/' + ${student.id}}">Edit</a>
+                        <a class="h4 mr-3" th:href="@{'/students/delete/' + ${student.id}}">Delete</a>
+                    </td>
+                </tr>
+            </th:block>
+            </tbody>
+        </table>
+    </div>
 </div>
 </body>
 </html>
